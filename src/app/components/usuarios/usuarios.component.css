@@ -1,0 +1,18 @@
+
+.imgcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imgcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imgcontent img {
+  margin: 1px; /* Ajusta los márgenes entre las imágenes según tus necesidades */
+  width: 100px;
+  height: 100px;
+  }

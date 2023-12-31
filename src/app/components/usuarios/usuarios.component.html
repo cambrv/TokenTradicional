@@ -1,0 +1,27 @@
+    <div *ngIf="usuarioAutenticado">
+      <div class="card text-center ">
+        <div class="card-header ">
+          Información
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Bienvenido, {{ usuarioAutenticado.name }} (@{{usuarioAutenticado.username}})
+          </h5>
+          <div class="imgcontainer">      
+            <div class="imgcontent">
+              <img [src]="usuarioAutenticado.imagen" class="img-fluid rounded-start" id="profile"> 
+              <img *ngIf="usuarioAutenticado.favoriteAlbum == 'Red'" 
+              src="https://i.scdn.co/image/ab67616d0000b273318443aab3531a0558e79a4d" alt="Album Favorito"> 
+            </div>    
+          </div>
+          <p class="card-text ">Tu album favorito de Taylor Swift es: {{usuarioAutenticado.favoriteAlbum}}</p>
+          <button type="button" class="btn btn-outline-dark" (click)="logout()" >Cerrar Sesión</button>
+        </div>
+        <div class="card-footer text-body-secondary">
+          Fecha de Nacimiento: {{usuarioAutenticado.birth| date:'dd-MM-yyyy'}}
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!usuarioAutenticado">
+      <p>No has iniciado sesión, pendejo.</p>
+      <a href="login" [routerLink]="['/login']" routerLinkActive="active">Iniciar sesión</a>
+    </div>

@@ -1,0 +1,22 @@
+<div class="componente-fondo">
+  <form (ngSubmit)="login(username, password)">
+      <h2>Inicio de sesión</h2>
+      <div class="form-floating mb-3">
+        <input type="text" [(ngModel)]="username" name="username" required class="form-control" id="floatingInput" placeholder="Escriba aquí">
+        <label for="floatingInput">Usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" [(ngModel)]="password" name="password" required class="form-control" id="floatingPassword" placeholder="Escriba aquí">
+        <label for="floatingPassword">Contraseña</label>
+  
+      </div>
+      <button type="submit" class="btn btn-outline-dark">Iniciar sesión</button>
+    </form>
+      <div *ngIf="mensaje" class="alert">
+        <div class="alert alert-danger" role="alert">
+          {{ mensaje }}
+        </div>
+      </div>
+    
+</div>
+

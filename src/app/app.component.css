@@ -1,0 +1,11 @@
+.container{
+    position: relative;
+    min-height: 580px;
+    padding-bottom: 60px;
+}
+footer {
+    background-color: #2B3035;
+    padding: 2%;
+    color: white;
+  }
+  
